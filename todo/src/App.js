@@ -1,26 +1,24 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { Component } from 'react';
+import Sky from './Sky';
+import Card from './Card'
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+
+  render() {
+    return (
+      <div className="App">
+        <Sky />
+        <div className="container">
+          <Card />
+          <div className="followMe">
+            <a className="icon"  rel="noopener noreferrer" href="https://github.com/lucagez/react-cloudy-todo-list" target="_blank"><i className="fab fa-github fa-3x"></i></a>
+            <a className="icon" rel="noopener noreferrer" href="https://codepen.io/lucagez" target="_blank"><i className="fab fa-codepen fa-3x"></i></a>
+          </div>
+        </div>
+      </div>
+    );
+  }
 }
 
 export default App;
